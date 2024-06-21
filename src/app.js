@@ -21,14 +21,8 @@ function fabricaexcusas() {
     return randomNumber;
   }
 
-  return (
-    who[getRandomInt()] +
-    " " +
-    action[getRandomInt()] +
-    " " +
-    what[getRandomInt()] +
-    " " +
-    when[getRandomInt()]
-  );
+  return `${who[getRandomInt()]} ${action[getRandomInt()]} ${
+    what[getRandomInt()]
+  } ${when[getRandomInt()]}`;
 }
 document.getElementById("excusa").innerHTML = fabricaexcusas();

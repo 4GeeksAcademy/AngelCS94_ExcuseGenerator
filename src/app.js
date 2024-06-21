@@ -15,26 +15,20 @@ function fabricaexcusas() {
     "while I was exercising",
     "during my lunch"
   ];
-  let myArray = [
-    who[getRandomInt()],
-    action[getRandomInt()],
-    what[getRandomInt()],
-    when[getRandomInt()]
-  ];
+
   function getRandomInt() {
     let randomNumber = Math.floor(Math.random() * 3);
     return randomNumber;
   }
 
-  // return (
-  //   who[getRandomInt()] +
-  //   " " +
-  //   action[getRandomInt()] +
-  //   " " +
-  //   what[getRandomInt()] +
-  //   " " +
-  //   when[getRandomInt()]
-  // );
-  return myArray[0];
+  return (
+    who[getRandomInt()] +
+    " " +
+    action[getRandomInt()] +
+    " " +
+    what[getRandomInt()] +
+    " " +
+    when[getRandomInt()]
+  );
 }
 document.getElementById("excusa").innerHTML = fabricaexcusas();

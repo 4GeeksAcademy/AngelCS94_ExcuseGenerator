@@ -16,19 +16,19 @@ function fabricaexcusas() {
     "during my lunch"
   ];
 
-  function getRandomInt() {
-    let randomNumber = Math.floor(Math.random() * 3);
+  function getRandomInt(MyArray) {
+    let randomNumber = Math.floor(Math.random() * MyArray.length);
     return randomNumber;
   }
 
   return (
-    who[getRandomInt()] +
+    who[getRandomInt(who)] +
     " " +
-    action[getRandomInt()] +
+    action[getRandomInt(action)] +
     " " +
-    what[getRandomInt()] +
+    what[getRandomInt(what)] +
     " " +
-    when[getRandomInt()]
+    when[getRandomInt(when)]
   );
 }
 document.getElementById("excusa").innerHTML = fabricaexcusas();
